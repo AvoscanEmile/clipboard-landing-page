@@ -1,0 +1,150 @@
+/* CSS variables */
+
+:root {
+    --clr-cyan: hsl(171, 66%, 44%);
+    --clr-cyan-shadow: hsl(171, 66%, 30%);
+    --clr-blue: hsl(233, 100%, 69%);
+    --clr-blue-shadow: hsl(233, 100%, 60%);
+    --clr-gray: #4c545d;
+    --clr-white: #9fabb2;
+    --ff: "Bai Jamjuree", sans-serif;
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fs-h1: 40px;
+    --fs-h2: 30px;
+    --fs-h3: 24px;
+    --fs-p: 18px;
+}
+
+/* General styling */
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: var(--ff);
+    font-size: var(--fs-p);
+    font-weight: var(--fw-regular);
+    color: var(--clr-white);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--clr-gray);
+    font-weight: var(--fw-semibold);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+
+/* Header styling */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: clamp(1600px, 100vw, 9999px) 285px;
+    margin-bottom: 80px;
+}
+
+.header__img {
+    margin: 3.5rem;
+}
+
+.header__title {
+    margin: 0;
+    text-align: center;
+    width: clamp(300px, 90vw, 650px);
+}
+
+.header__description {
+    width: clamp(300px, 90vw, 650px);
+    text-align: center;
+}
+
+.header__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.header__link {
+    padding: .75em 2em;
+    border-radius: 50px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: var(--fw-semibold);
+}
+
+.header__link:active {
+    transform: translateY(3px);
+}
+
+.header__link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    transform: translateY(-34px) translateX(-36px);
+    width: 218px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.header__link:active::after {
+    background-color: transparent;
+}
+
+.header__link--ios {
+    background-color: var(--clr-cyan);
+    margin-right: 25px;
+}
+
+.header__link--ios::after {
+    background-color: var(--clr-cyan-shadow);
+}
+
+.header__link--mac {
+    background-color: var(--clr-blue);
+}
+
+.header__link--mac::after {
+    background-color: var(--clr-blue-shadow);
+    width: 224px;
+}
+
+/* Main styling */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-section {
+    width: clamp(300px, 90vw, 700px);
+    text-align: center;
+}
