@@ -102,6 +102,7 @@ This section offers an exhaustive overview of the CSS styles applied to various 
       - `.container__link`: Links shimmer with cosmic energy, inviting further exploration of the universe.
     - `.container__social`: The cosmic council of social media links, connecting you to the vast cosmic network.
       - `.container__social-link`: Each link represents a cosmic network, interconnecting across the universe.
+
 **For further information. Please refer to the HTML/CSS code**
 
 
